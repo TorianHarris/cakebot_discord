@@ -71,20 +71,16 @@ module.exports = {
 
             write(`${message.author.username}: ${message} (${message.createdAt})`,
               `---${gallery.title.pretty.replace("&#039;", "'")} (${gallery.id})`);
-            console.log(`${message.author.username}: ${message} (${message.createdAt})`);
 		  })
 		  .catch(function(error) {
-			console.log('3' + error);
 			message.channel.send("There was an error for your request.");
 		  })
 		})
 		.catch(function(error) {
-			console.log('1' + error);
 			message.channel.send("There was an error for your request.");
 		  });
       })
       .catch(function(error) {
-        console.log('1' + error);
         message.channel.send("There was an error for your request.");
       });
   }
