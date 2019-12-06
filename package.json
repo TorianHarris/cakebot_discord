@@ -1,0 +1,19 @@
+{
+  "name": "discord-js-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^11.4.2",
+    "forever": "^1.0.0",
+    "nhentai-api-js": "^1.1.2",
+    "pm2": "^4.1.2",
+    "pokedex-promise-v2": "^3.1.1"
+  }
+}
