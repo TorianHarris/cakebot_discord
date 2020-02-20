@@ -1,7 +1,17 @@
 require("dotenv").config();
 const fs = require("fs");
 const { log } = require("./helperFunctions");
-const bdays = [];
+
+
+const mongoose = require("mongoose");
+const Data = require('./data');
+const uri = "mongodb+srv://cakebot:Starbound917@cluster0-bgmxk.mongodb.net/data?retryWrites=true&w=majority";
+mongoose.connect(uri, { useUnifiedTopology:true, useNewUrlParser: true })
+.then(() => console.log('connected to the database!'))
+// .then(Data.findOneAndUpdate({user: 'hafssfjkah'}, {user: 'new guy'}, {new: true, upsert: true}, (err, d) => {
+//   console.log(d)
+// }))
+.catch(err => console.log('DB Connection Error: ' + err));
 
 const prefix = "!cake";
 const Discord = require("discord.js");
@@ -76,11 +86,17 @@ client.on("message", message => {
   }
 
   try {
-    command.execute(message, args, bdays, log);
+    command.execute(message, args, Data, log);
   } catch (error) {
     console.error(error);
     message.reply("there was an error trying to execute that command.");
   }
 });
+
+// function myFunction() {
+//   setTimeout(function(){message.channel.send("Hello"); }, 3000);
+// };
+
+// myFunction();
 
 module.exports = client;
