@@ -26,7 +26,7 @@ module.exports = {
         .setTitle('Urban Dictionary')
         .addField(entry.word, definition)
         .addField('Example:', example)
-        .setFooter('Powered by Thotbot');
+        // .setFooter('Powered by Thotbot');
 
         message.channel.send(embed);
       }).catch((error) => {
