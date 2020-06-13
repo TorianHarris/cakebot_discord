@@ -13,7 +13,7 @@ mongoose.connect(uri, { useUnifiedTopology:true, useNewUrlParser: true })
 // }))
 .catch(err => console.log('DB Connection Error: ' + err));
 
-const prefix = "!cake";
+const prefix = "!shell";
 const Discord = require("discord.js");
 
 const client = new Discord.Client();

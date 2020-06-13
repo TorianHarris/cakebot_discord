@@ -16,7 +16,7 @@ module.exports = {
 
     Data.findOneAndUpdate(
       { user: message.author.id },
-      { user: message.author.id, bday: moment(args[0], "MM-DD") },
+      { bday: moment(args[0], "MM-DD") },
       { new: true, upsert: true },
       err => {
         if (err) {

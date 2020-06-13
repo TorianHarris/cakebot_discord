@@ -1,4 +1,4 @@
-const prefix = "!cake";
+const prefix = "!shell";
 module.exports = {
 	name: 'help',
 	aliases: ['commands'],
